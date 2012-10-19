@@ -20,4 +20,4 @@ Typical usage will look something like this:
 
 Have a look at the demo app to see it in context.
 
-![Demo screenshot](screenshot.png)
+![Demo screenshot](https://raw.github.com/alextrob/ARChromeActivity/master/screenshot.png)
