@@ -1,0 +1,71 @@
+/*
+  ARChromeActivity.m
+
+  Copyright (c) 2012 Alex Robinson
+ 
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+
+#import "ARChromeActivity.h"
+
+@implementation ARChromeActivity {
+	NSURL *_activityURL;
+}
+
+- (UIImage *)activityImage {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		return [UIImage imageNamed:@"chrome-ipad"];
+	}
+	else {
+		return [UIImage imageNamed:@"chrome-iphone"];
+	}
+}
+
+- (NSString *)activityTitle {
+    return @"Open in Chrome";
+}
+
+- (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
+	return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome://"]];
+}
+
+- (void)prepareWithActivityItems:(NSArray *)activityItems {
+	_activityURL = [activityItems lastObject];
+}
+
+- (void)performActivity {
+	
+	NSURL *inputURL = _activityURL;
+	NSString *scheme = inputURL.scheme;
+	
+	// Replace the URL Scheme with the Chrome equivalent.
+	NSString *chromeScheme = nil;
+	if ([scheme isEqualToString:@"http"]) {
+		chromeScheme = @"googlechrome";
+	} else if ([scheme isEqualToString:@"https"]) {
+		chromeScheme = @"googlechromes";
+	}
+	
+	// Proceed only if a valid Google Chrome URI Scheme is available.
+	if (chromeScheme) {
+		NSString *absoluteString = [inputURL absoluteString];
+		NSRange rangeForScheme = [absoluteString rangeOfString:@":"];
+		NSString *urlNoScheme =
+		[absoluteString substringFromIndex:rangeForScheme.location];
+		NSString *chromeURLString =
+		[chromeScheme stringByAppendingString:urlNoScheme];
+		NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
+		
+		// Open the URL with Chrome.
+		[[UIApplication sharedApplication] openURL:chromeURL];
+		
+		[self activityDidFinish:YES];
+	}
+}
+
+@end

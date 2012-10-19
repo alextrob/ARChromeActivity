@@ -16,6 +16,12 @@
 		FA9861BA163185A100F1BC17 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861B9163185A100F1BC17 /* Default.png */; };
 		FA9861BC163185A100F1BC17 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861BB163185A100F1BC17 /* Default@2x.png */; };
 		FA9861BE163185A100F1BC17 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861BD163185A100F1BC17 /* Default-568h@2x.png */; };
+		FA9861CB163185EF00F1BC17 /* ARChromeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861C6163185EF00F1BC17 /* ARChromeActivity.m */; };
+		FA9861CC163185EF00F1BC17 /* chrome-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C7163185EF00F1BC17 /* chrome-ipad.png */; };
+		FA9861CD163185EF00F1BC17 /* chrome-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C8163185EF00F1BC17 /* chrome-ipad@2x.png */; };
+		FA9861CE163185EF00F1BC17 /* chrome-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C9163185EF00F1BC17 /* chrome-iphone.png */; };
+		FA9861CF163185EF00F1BC17 /* chrome-iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861CA163185EF00F1BC17 /* chrome-iphone@2x.png */; };
+		FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861D1163186CE00F1BC17 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,14 @@
 		FA9861B9163185A100F1BC17 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FA9861BB163185A100F1BC17 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FA9861BD163185A100F1BC17 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FA9861C5163185EF00F1BC17 /* ARChromeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARChromeActivity.h; sourceTree = "<group>"; };
+		FA9861C6163185EF00F1BC17 /* ARChromeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARChromeActivity.m; sourceTree = "<group>"; };
+		FA9861C7163185EF00F1BC17 /* chrome-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chrome-ipad.png"; sourceTree = "<group>"; };
+		FA9861C8163185EF00F1BC17 /* chrome-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chrome-ipad@2x.png"; sourceTree = "<group>"; };
+		FA9861C9163185EF00F1BC17 /* chrome-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chrome-iphone.png"; sourceTree = "<group>"; };
+		FA9861CA163185EF00F1BC17 /* chrome-iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chrome-iphone@2x.png"; sourceTree = "<group>"; };
+		FA9861D0163186CE00F1BC17 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FA9861D1163186CE00F1BC17 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,9 @@
 			children = (
 				FA9861B6163185A100F1BC17 /* AppDelegate.h */,
 				FA9861B7163185A100F1BC17 /* AppDelegate.m */,
+				FA9861D0163186CE00F1BC17 /* RootViewController.h */,
+				FA9861D1163186CE00F1BC17 /* RootViewController.m */,
+				FA9861C4163185EF00F1BC17 /* ARChromeActivity */,
 				FA9861AE163185A100F1BC17 /* Supporting Files */,
 			);
 			path = ChromeActivityDemo;
@@ -98,6 +115,19 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		FA9861C4163185EF00F1BC17 /* ARChromeActivity */ = {
+			isa = PBXGroup;
+			children = (
+				FA9861C5163185EF00F1BC17 /* ARChromeActivity.h */,
+				FA9861C6163185EF00F1BC17 /* ARChromeActivity.m */,
+				FA9861C7163185EF00F1BC17 /* chrome-ipad.png */,
+				FA9861C8163185EF00F1BC17 /* chrome-ipad@2x.png */,
+				FA9861C9163185EF00F1BC17 /* chrome-iphone.png */,
+				FA9861CA163185EF00F1BC17 /* chrome-iphone@2x.png */,
+			);
+			path = ARChromeActivity;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -154,6 +184,10 @@
 				FA9861BA163185A100F1BC17 /* Default.png in Resources */,
 				FA9861BC163185A100F1BC17 /* Default@2x.png in Resources */,
 				FA9861BE163185A100F1BC17 /* Default-568h@2x.png in Resources */,
+				FA9861CC163185EF00F1BC17 /* chrome-ipad.png in Resources */,
+				FA9861CD163185EF00F1BC17 /* chrome-ipad@2x.png in Resources */,
+				FA9861CE163185EF00F1BC17 /* chrome-iphone.png in Resources */,
+				FA9861CF163185EF00F1BC17 /* chrome-iphone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +200,8 @@
 			files = (
 				FA9861B4163185A100F1BC17 /* main.m in Sources */,
 				FA9861B8163185A100F1BC17 /* AppDelegate.m in Sources */,
+				FA9861CB163185EF00F1BC17 /* ARChromeActivity.m in Sources */,
+				FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
