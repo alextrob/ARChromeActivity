@@ -18,12 +18,7 @@
 }
 
 - (UIImage *)activityImage {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		return [UIImage imageNamed:@"chrome-ipad"];
-	}
-	else {
-		return [UIImage imageNamed:@"chrome-iphone"];
-	}
+    return [UIImage imageNamed:@"ARChromeActivity"];
 }
 
 - (NSString *)activityTitle {
