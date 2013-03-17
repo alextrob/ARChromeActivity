@@ -17,6 +17,32 @@
 	NSURL *_activityURL;
 }
 
+@synthesize callbackURL = _callbackURL;
+@synthesize callbackSource = _callbackSource;
+@synthesize activityTitle = _activityTitle;
+
+- (void)commonInit {
+    _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
+    _activityTitle = @"Chrome";
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (id)initWithCallbackURL:(NSURL *)callbackURL {
+    self = [super init];
+    if (self) {
+        [self commonInit];
+        _callbackURL = callbackURL;
+    }
+    return self;
+}
+
 - (UIImage *)activityImage {
     return [UIImage imageNamed:@"ARChromeActivity"];
 }
@@ -26,7 +52,7 @@
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
-	return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome://"]];
+	return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]];
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
@@ -35,32 +61,19 @@
 
 - (void)performActivity {
 	
-	NSURL *inputURL = _activityURL;
-	NSString *scheme = inputURL.scheme;
-	
-	// Replace the URL Scheme with the Chrome equivalent.
-	NSString *chromeScheme = nil;
-	if ([scheme isEqualToString:@"http"]) {
-		chromeScheme = @"googlechrome";
-	} else if ([scheme isEqualToString:@"https"]) {
-		chromeScheme = @"googlechromes";
-	}
-	
-	// Proceed only if a valid Google Chrome URI Scheme is available.
-	if (chromeScheme) {
-		NSString *absoluteString = [inputURL absoluteString];
-		NSRange rangeForScheme = [absoluteString rangeOfString:@":"];
-		NSString *urlNoScheme =
-		[absoluteString substringFromIndex:rangeForScheme.location];
-		NSString *chromeURLString =
-		[chromeScheme stringByAppendingString:urlNoScheme];
-		NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
-		
-		// Open the URL with Chrome.
-		[[UIApplication sharedApplication] openURL:chromeURL];
-		
-		[self activityDidFinish:YES];
-	}
+    NSString *openingURL = [_activityURL.absoluteString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *callbackURL = [self.callbackURL.absoluteString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *sourceName = [self.callbackSource stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURL *activityURL = [NSURL URLWithString:
+                          [NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@",
+                           openingURL,
+                           callbackURL,
+                           sourceName]];
+    
+	[[UIApplication sharedApplication] openURL:activityURL];
+    
+	[self activityDidFinish:YES];
 }
 
 @end

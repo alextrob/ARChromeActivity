@@ -15,4 +15,15 @@
 
 @interface ARChromeActivity : UIActivity
 
+// Empty by default. Either set this in the initializer, or set this property.
+@property (strong, nonatomic) NSURL *callbackURL;
+
+// Uses the "CFBundleName" from your Info.plist by default.
+@property (strong, nonatomic) NSString *callbackSource;
+
+// The text beneath the icon. Defaults to "Chrome".
+@property (strong, nonatomic) NSString *activityTitle;
+
+- (id)initWithCallbackURL:(NSURL *)callbackURL;
+
 @end
