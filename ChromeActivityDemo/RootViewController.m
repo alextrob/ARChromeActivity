@@ -27,14 +27,18 @@
 
 - (void)showActivities:(id)sender {
 	
-	NSURL *urlToShare = [NSURL URLWithString:@"http://alextrob.net/"];
+	NSURL *urlToShare = [NSURL URLWithString:@"https://github.com/alextrob/ARChromeActivity"];
 	NSArray *activityItems = [NSArray arrayWithObject:urlToShare];
 	
-	ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] init];
+	ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] initWithCallbackURL:[NSURL URLWithString:@"my-app-callback://"]];
+    
+    // Extra properties you can set:
+//    [chromeActivity setActivityTitle:@"Open in Chrome"];
+//    [chromeActivity setCallbackSource:@"Demo"];
+    
 	NSArray *applicationActivities = [NSArray arrayWithObject:chromeActivity];
 	
-	UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems
-																			 applicationActivities:applicationActivities];
+	UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
 	
 	[self presentViewController:activityVC animated:YES completion:nil];
 }
