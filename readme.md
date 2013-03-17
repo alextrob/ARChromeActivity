@@ -12,11 +12,11 @@ Typical usage will look something like this:
 	ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] init];
 	NSArray *applicationActivities = [NSArray arrayWithObject:chromeActivity];
 
-	UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems
-																			 applicationActivities:applicationActivities];
-
+	UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+	
 	[self presentViewController:activityVC animated:YES completion:nil];
 
+It also supports `x-callback-url` by either initializing with `initWithCallbackURL:`, or setting the `callbackURL` property.
 
 Have a look at the demo app to see it in context.
 
