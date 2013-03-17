@@ -22,7 +22,7 @@
 }
 
 - (NSString *)activityTitle {
-    return @"Open in Chrome";
+    return @"Chrome";
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
