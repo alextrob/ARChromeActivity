@@ -47,6 +47,10 @@
     return [UIImage imageNamed:@"ARChromeActivity"];
 }
 
+- (NSString *)activityType {
+    return NSStringFromClass([self class]);
+}
+
 - (NSString *)activityTitle {
     return @"Chrome";
 }
