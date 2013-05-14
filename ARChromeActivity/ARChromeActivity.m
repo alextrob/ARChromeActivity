@@ -51,10 +51,6 @@
     return NSStringFromClass([self class]);
 }
 
-- (NSString *)activityTitle {
-    return @"Chrome";
-}
-
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
 	return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]];
 }
