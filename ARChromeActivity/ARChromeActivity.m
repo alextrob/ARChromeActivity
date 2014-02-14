@@ -14,16 +14,21 @@
 #import "ARChromeActivity.h"
 
 @implementation ARChromeActivity {
-	NSURL *_activityURL;
+    NSURL *_activityURL;
 }
 
 @synthesize callbackURL = _callbackURL;
 @synthesize callbackSource = _callbackSource;
 @synthesize activityTitle = _activityTitle;
 
+static NSString *encodeByAddingPercentEscapes(NSString *input) {
+    NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)input, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+    return encodedValue;
+}
+
 - (void)commonInit {
     _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
-    _activityTitle = @"Chrome";
+    _activityTitle = @"Open in Chrome";
 }
 
 - (id)init {
@@ -52,28 +57,25 @@
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
-	return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]];
+    return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]];
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
-	_activityURL = [activityItems lastObject];
+    for(id item in activityItems){
+        if([item isKindOfClass:NSURL.class]){
+            _activityURL = (NSURL *)item;
+        }
+    }
 }
 
 - (void)performActivity {
-	
-    NSString *openingURL = [_activityURL.absoluteString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *callbackURL = [self.callbackURL.absoluteString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *sourceName = [self.callbackSource stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    NSURL *activityURL = [NSURL URLWithString:
-                          [NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@",
-                           openingURL,
-                           callbackURL,
-                           sourceName]];
-    
-	[[UIApplication sharedApplication] openURL:activityURL];
-    
-	[self activityDidFinish:YES];
+    NSString *openingURL = encodeByAddingPercentEscapes(_activityURL.absoluteString);
+    NSString *callbackURL = encodeByAddingPercentEscapes(self.callbackURL.absoluteString);
+    NSString *sourceName = encodeByAddingPercentEscapes(self.callbackSource);
+
+    NSURL *activityURL = [NSURL URLWithString:[NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@", openingURL, callbackURL, sourceName]];
+    [[UIApplication sharedApplication] openURL:activityURL];
+    [self activityDidFinish:YES];
 }
 
 @end
