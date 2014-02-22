@@ -19,10 +19,20 @@
     [super viewDidLoad];
 	
 	UIButton *showActivitiesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[showActivitiesButton.titleLabel setFont:[UIFont systemFontOfSize:22.0f]];
 	[showActivitiesButton setTitle:@"Show Activities" forState:UIControlStateNormal];
 	[showActivitiesButton addTarget:self action:@selector(showActivities:) forControlEvents:UIControlEventTouchUpInside];
+	
+	[showActivitiesButton sizeToFit];
+	
+	CGRect frame = showActivitiesButton.frame;
+	
+	frame.origin.x = floor(self.view.frame.size.width/2 - frame.size.width/2);
+	frame.origin.y = floor(self.view.frame.size.height * 0.25);
+	
+	[showActivitiesButton setFrame:frame];
+	
 	[self.view addSubview:showActivitiesButton];
-	[showActivitiesButton setFrame:CGRectMake(10, 10, 120, 50)];
 }
 
 - (void)showActivities:(id)sender {
