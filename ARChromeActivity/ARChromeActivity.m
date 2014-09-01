@@ -57,15 +57,24 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
-    return [[activityItems lastObject] isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]];
+	if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]]) {
+		return NO;
+	}
+	for (id item in activityItems){
+		if ([item isKindOfClass:NSURL.class]){
+			return YES;
+		}
+	}
+	return NO;
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
-    for(id item in activityItems){
-        if([item isKindOfClass:NSURL.class]){
-            _activityURL = (NSURL *)item;
-        }
-    }
+	for (id item in activityItems) {
+		if ([item isKindOfClass:NSURL.class]) {
+			_activityURL = (NSURL *)item;
+			return;
+		}
+	}
 }
 
 - (void)performActivity {
