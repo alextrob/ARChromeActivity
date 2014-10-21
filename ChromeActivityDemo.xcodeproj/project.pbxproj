@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1868EF19F67E6A0091ED0C /* ARChromeActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */; };
+		FA1868F019F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */; };
 		FA9861A8163185A100F1BC17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9861A7163185A100F1BC17 /* UIKit.framework */; };
 		FA9861AA163185A100F1BC17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9861A9163185A100F1BC17 /* Foundation.framework */; };
 		FA9861AC163185A100F1BC17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9861AB163185A100F1BC17 /* CoreGraphics.framework */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x.png"; sourceTree = "<group>"; };
+		FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x~ipad.png"; sourceTree = "<group>"; };
 		FA9861A3163185A100F1BC17 /* ChromeActivityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromeActivityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9861A7163185A100F1BC17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA9861A9163185A100F1BC17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +129,8 @@
 				FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */,
 				FA9861C8163185EF00F1BC17 /* ARChromeActivity@2x~ipad.png */,
 				FA9861C7163185EF00F1BC17 /* ARChromeActivity~ipad.png */,
+				FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */,
+				FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */,
 			);
 			path = ARChromeActivity;
 			sourceTree = SOURCE_ROOT;
@@ -182,11 +188,13 @@
 			files = (
 				FA9861B2163185A100F1BC17 /* InfoPlist.strings in Resources */,
 				FA9861BA163185A100F1BC17 /* Default.png in Resources */,
+				FA1868F019F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png in Resources */,
 				FA9861BC163185A100F1BC17 /* Default@2x.png in Resources */,
 				FA9861BE163185A100F1BC17 /* Default-568h@2x.png in Resources */,
 				FA9861CC163185EF00F1BC17 /* ARChromeActivity~ipad.png in Resources */,
 				FA9861CD163185EF00F1BC17 /* ARChromeActivity@2x~ipad.png in Resources */,
 				FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */,
+				FA1868EF19F67E6A0091ED0C /* ARChromeActivity@3x.png in Resources */,
 				FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
