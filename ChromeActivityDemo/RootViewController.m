@@ -40,7 +40,10 @@
 	NSURL *urlToShare = [NSURL URLWithString:@"https://github.com/alextrob/ARChromeActivity"];
 	NSArray *activityItems = [NSArray arrayWithObject:urlToShare];
 	
-	ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] initWithCallbackURL:[NSURL URLWithString:@"my-app-callback://"]];
+	ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] init];
+    
+    // If you register the Chrome URL scheme in your Info.plist, ARChrome activity can also be initialized like this:
+//    ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] initWithCallbackURL:[NSURL URLWithString:@"my-app-callback://"]];
     
     // Extra properties you can set:
 //    [chromeActivity setActivityTitle:@"Open in Chrome"];

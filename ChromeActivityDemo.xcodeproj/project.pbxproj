@@ -24,6 +24,8 @@
 		FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C9163185EF00F1BC17 /* ARChromeActivity.png */; };
 		FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */; };
 		FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861D1163186CE00F1BC17 /* RootViewController.m */; };
+		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@2x.png"; sourceTree = "<group>"; };
 		FA9861D0163186CE00F1BC17 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		FA9861D1163186CE00F1BC17 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FAFC91021BAFF4680075BE44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				FA9861D0163186CE00F1BC17 /* RootViewController.h */,
 				FA9861D1163186CE00F1BC17 /* RootViewController.m */,
 				FA9861C4163185EF00F1BC17 /* ARChromeActivity */,
+				FAFC91021BAFF4680075BE44 /* Images.xcassets */,
 				FA9861AE163185A100F1BC17 /* Supporting Files */,
 			);
 			path = ChromeActivityDemo;
@@ -116,6 +121,7 @@
 				FA9861B9163185A100F1BC17 /* Default.png */,
 				FA9861BB163185A100F1BC17 /* Default@2x.png */,
 				FA9861BD163185A100F1BC17 /* Default-568h@2x.png */,
+				FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,7 +167,7 @@
 		FA98619A163185A100F1BC17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alex Robinson";
 			};
 			buildConfigurationList = FA98619D163185A100F1BC17 /* Build configuration list for PBXProject "ChromeActivityDemo" */;
@@ -192,8 +198,10 @@
 				FA9861BC163185A100F1BC17 /* Default@2x.png in Resources */,
 				FA9861BE163185A100F1BC17 /* Default-568h@2x.png in Resources */,
 				FA9861CC163185EF00F1BC17 /* ARChromeActivity~ipad.png in Resources */,
+				FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */,
 				FA9861CD163185EF00F1BC17 /* ARChromeActivity@2x~ipad.png in Resources */,
 				FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */,
+				FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */,
 				FA1868EF19F67E6A0091ED0C /* ARChromeActivity@3x.png in Resources */,
 				FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */,
 			);
@@ -238,6 +246,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -250,6 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -281,9 +291,12 @@
 		FA9861C2163185A100F1BC17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,9 +305,12 @@
 		FA9861C3163185A100F1BC17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
