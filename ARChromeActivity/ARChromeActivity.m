@@ -19,7 +19,6 @@
 
 @synthesize callbackURL = _callbackURL;
 @synthesize callbackSource = _callbackSource;
-@synthesize activityTitle = _activityTitle;
 
 static NSString *encodeByAddingPercentEscapes(NSString *input) {
     NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)input, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
@@ -28,7 +27,6 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 
 - (void)commonInit {
     _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
-    _activityTitle = @"Open in Chrome";
 }
 
 - (id)init {
@@ -46,6 +44,11 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
         _callbackURL = callbackURL;
     }
     return self;
+}
+
+- (NSString *)activityTitle {
+    NSString *defaultString = [[NSBundle mainBundle] localizedStringForKey:@"Open in Chrome" value:@"Open in Chrome" table:@"ARChromeActivity"];
+    return [[NSBundle mainBundle] localizedStringForKey:@"Open in Chrome" value:defaultString table:nil];
 }
 
 - (UIImage *)activityImage {
