@@ -49,7 +49,11 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"ARChromeActivity"];
+    if ([[UIImage class] respondsToSelector:@selector(imageNamed:inBundle:compatibleWithTraitCollection:)]) {
+        return [UIImage imageNamed:@"ARChromeActivity" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+    } else {
+        return [UIImage imageNamed:@"ARChromeActivity"];
+    }
 }
 
 - (NSString *)activityType {
