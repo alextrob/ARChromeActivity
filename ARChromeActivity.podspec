@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.author       = { "Alex Robinson" => "alex@rbnsn.me" }
   s.source       = { :git => "https://github.com/alextrob/ARChromeActivity.git", :tag => s.version.to_s }
   s.source_files = 'ARChromeActivity/*.{h,m}'
-  s.resources    = 'ARChromeActivity/*.png'
+  s.resources    = 'ARChromeActivity/*.{png,lproj}'
   s.requires_arc = true
 end

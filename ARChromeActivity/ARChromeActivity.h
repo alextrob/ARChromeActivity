@@ -18,9 +18,6 @@
 /// Uses the "CFBundleName" from your Info.plist by default.
 @property (strong, nonatomic) NSString *callbackSource;
 
-/// The text beneath the icon. Defaults to "Chrome".
-@property (strong, nonatomic) NSString *activityTitle;
-
 /// Empty by default. Either set this in the initializer, or set this property. For iOS 9+, make sure you register the Chrome URL scheme in your Info.plist. See the demo project.
 @property (strong, nonatomic) NSURL *callbackURL;
 

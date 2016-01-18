@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2081804D1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081801E1C056DD90050649F /* ARChromeActivity.strings */; };
+		2081804E1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180211C056DD90050649F /* ARChromeActivity.strings */; };
+		2081804F1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180241C056DD90050649F /* ARChromeActivity.strings */; };
+		208180501C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180271C056DD90050649F /* ARChromeActivity.strings */; };
+		208180511C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081802A1C056DD90050649F /* ARChromeActivity.strings */; };
+		208180521C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081802D1C056DD90050649F /* ARChromeActivity.strings */; };
+		208180531C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180301C056DD90050649F /* ARChromeActivity.strings */; };
+		208180541C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180331C056DD90050649F /* ARChromeActivity.strings */; };
+		208180551C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180361C056DD90050649F /* ARChromeActivity.strings */; };
+		208180561C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180391C056DD90050649F /* ARChromeActivity.strings */; };
+		208180571C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081803C1C056DD90050649F /* ARChromeActivity.strings */; };
+		208180581C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081803F1C056DD90050649F /* ARChromeActivity.strings */; };
+		208180591C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180421C056DD90050649F /* ARChromeActivity.strings */; };
+		2081805A1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180451C056DD90050649F /* ARChromeActivity.strings */; };
+		2081805B1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208180481C056DD90050649F /* ARChromeActivity.strings */; };
+		2081805C1C056DD90050649F /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2081804B1C056DD90050649F /* ARChromeActivity.strings */; };
 		FA1868EF19F67E6A0091ED0C /* ARChromeActivity@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */; };
 		FA1868F019F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */; };
 		FA9861A8163185A100F1BC17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9861A7163185A100F1BC17 /* UIKit.framework */; };
@@ -24,11 +40,27 @@
 		FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C9163185EF00F1BC17 /* ARChromeActivity.png */; };
 		FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */; };
 		FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861D1163186CE00F1BC17 /* RootViewController.m */; };
-		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; };
+		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2081801F1C056DD90050649F /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ca; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180221C056DD90050649F /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180251C056DD90050649F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = de; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180281C056DD90050649F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		2081802B1C056DD90050649F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = es; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		2081802E1C056DD90050649F /* eu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = eu; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180311C056DD90050649F /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = fi; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180341C056DD90050649F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = fr; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180371C056DD90050649F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = it; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		2081803A1C056DD90050649F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ja; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		2081803D1C056DD90050649F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ko; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180401C056DD90050649F /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = nl; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180431C056DD90050649F /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = no; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180461C056DD90050649F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = pl; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		208180491C056DD90050649F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = pt; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		2081804C1C056DD90050649F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ru; path = ARChromeActivity.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x.png"; sourceTree = "<group>"; };
 		FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x~ipad.png"; sourceTree = "<group>"; };
 		FA9861A3163185A100F1BC17 /* ChromeActivityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromeActivityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +102,134 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2081801D1C056DD90050649F /* ca.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081801E1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = ca.lproj;
+			sourceTree = "<group>";
+		};
+		208180201C056DD90050649F /* cs.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180211C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = cs.lproj;
+			sourceTree = "<group>";
+		};
+		208180231C056DD90050649F /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180241C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = de.lproj;
+			sourceTree = "<group>";
+		};
+		208180261C056DD90050649F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180271C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		208180291C056DD90050649F /* es.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081802A1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = es.lproj;
+			sourceTree = "<group>";
+		};
+		2081802C1C056DD90050649F /* eu.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081802D1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = eu.lproj;
+			sourceTree = "<group>";
+		};
+		2081802F1C056DD90050649F /* fi.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180301C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = fi.lproj;
+			sourceTree = "<group>";
+		};
+		208180321C056DD90050649F /* fr.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180331C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = fr.lproj;
+			sourceTree = "<group>";
+		};
+		208180351C056DD90050649F /* it.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180361C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = it.lproj;
+			sourceTree = "<group>";
+		};
+		208180381C056DD90050649F /* ja.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180391C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = ja.lproj;
+			sourceTree = "<group>";
+		};
+		2081803B1C056DD90050649F /* ko.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081803C1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = ko.lproj;
+			sourceTree = "<group>";
+		};
+		2081803E1C056DD90050649F /* nl.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081803F1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = nl.lproj;
+			sourceTree = "<group>";
+		};
+		208180411C056DD90050649F /* no.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180421C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = no.lproj;
+			sourceTree = "<group>";
+		};
+		208180441C056DD90050649F /* pl.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180451C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = pl.lproj;
+			sourceTree = "<group>";
+		};
+		208180471C056DD90050649F /* pt.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				208180481C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = pt.lproj;
+			sourceTree = "<group>";
+		};
+		2081804A1C056DD90050649F /* ru.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2081804B1C056DD90050649F /* ARChromeActivity.strings */,
+			);
+			path = ru.lproj;
+			sourceTree = "<group>";
+		};
 		FA986198163185A100F1BC17 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +297,22 @@
 				FA9861C7163185EF00F1BC17 /* ARChromeActivity~ipad.png */,
 				FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */,
 				FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */,
+				2081801D1C056DD90050649F /* ca.lproj */,
+				208180201C056DD90050649F /* cs.lproj */,
+				208180231C056DD90050649F /* de.lproj */,
+				208180261C056DD90050649F /* en.lproj */,
+				208180291C056DD90050649F /* es.lproj */,
+				2081802C1C056DD90050649F /* eu.lproj */,
+				2081802F1C056DD90050649F /* fi.lproj */,
+				208180321C056DD90050649F /* fr.lproj */,
+				208180351C056DD90050649F /* it.lproj */,
+				208180381C056DD90050649F /* ja.lproj */,
+				2081803B1C056DD90050649F /* ko.lproj */,
+				2081803E1C056DD90050649F /* nl.lproj */,
+				208180411C056DD90050649F /* no.lproj */,
+				208180441C056DD90050649F /* pl.lproj */,
+				208180471C056DD90050649F /* pt.lproj */,
+				2081804A1C056DD90050649F /* ru.lproj */,
 			);
 			path = ARChromeActivity;
 			sourceTree = SOURCE_ROOT;
@@ -176,6 +352,21 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ca,
+				cs,
+				de,
+				es,
+				eu,
+				fi,
+				fr,
+				it,
+				ja,
+				ko,
+				nl,
+				no,
+				pl,
+				pt,
+				ru,
 			);
 			mainGroup = FA986198163185A100F1BC17;
 			productRefGroup = FA9861A4163185A100F1BC17 /* Products */;
@@ -194,15 +385,31 @@
 			files = (
 				FA9861B2163185A100F1BC17 /* InfoPlist.strings in Resources */,
 				FA9861BA163185A100F1BC17 /* Default.png in Resources */,
+				2081805C1C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180561C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180541C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				2081804E1C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA1868F019F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png in Resources */,
+				2081805A1C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180571C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA9861BC163185A100F1BC17 /* Default@2x.png in Resources */,
 				FA9861BE163185A100F1BC17 /* Default-568h@2x.png in Resources */,
+				2081805B1C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA9861CC163185EF00F1BC17 /* ARChromeActivity~ipad.png in Resources */,
+				2081804F1C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				2081804D1C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */,
+				208180521C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA9861CD163185EF00F1BC17 /* ARChromeActivity@2x~ipad.png in Resources */,
 				FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */,
+				208180531C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */,
+				208180551C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180511C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA1868EF19F67E6A0091ED0C /* ARChromeActivity@3x.png in Resources */,
+				208180501C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180591C056DD90050649F /* ARChromeActivity.strings in Resources */,
+				208180581C056DD90050649F /* ARChromeActivity.strings in Resources */,
 				FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +431,134 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2081801E1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081801F1C056DD90050649F /* ca */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180211C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180221C056DD90050649F /* cs */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180241C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180251C056DD90050649F /* de */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180271C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180281C056DD90050649F /* en */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		2081802A1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081802B1C056DD90050649F /* es */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		2081802D1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081802E1C056DD90050649F /* eu */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180301C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180311C056DD90050649F /* fi */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180331C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180341C056DD90050649F /* fr */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180361C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180371C056DD90050649F /* it */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180391C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081803A1C056DD90050649F /* ja */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		2081803C1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081803D1C056DD90050649F /* ko */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		2081803F1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180401C056DD90050649F /* nl */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180421C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180431C056DD90050649F /* no */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180451C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180461C056DD90050649F /* pl */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		208180481C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208180491C056DD90050649F /* pt */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		2081804B1C056DD90050649F /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2081804C1C056DD90050649F /* ru */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
 		FA9861B0163185A100F1BC17 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
