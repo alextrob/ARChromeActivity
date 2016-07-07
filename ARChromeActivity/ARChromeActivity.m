@@ -17,10 +17,6 @@
     NSURL *_activityURL;
 }
 
-@synthesize callbackURL = _callbackURL;
-@synthesize callbackSource = _callbackSource;
-@synthesize activityTitle = _activityTitle;
-
 static NSString *encodeByAddingPercentEscapes(NSString *input) {
     NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)input, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
     return encodedValue;
@@ -89,13 +85,44 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 }
 
 - (void)performActivity {
-    NSString *openingURL = encodeByAddingPercentEscapes(_activityURL.absoluteString);
-    NSString *callbackURL = encodeByAddingPercentEscapes(self.callbackURL.absoluteString);
-    NSString *sourceName = encodeByAddingPercentEscapes(self.callbackSource);
-
-    NSURL *activityURL = [NSURL URLWithString:[NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@", openingURL, callbackURL, sourceName]];
-    [[UIApplication sharedApplication] openURL:activityURL];
-    [self activityDidFinish:YES];
+    
+    BOOL success = NO;
+    
+    if (_activityURL != nil) {
+        
+        if (self.callbackURL && self.callbackSource) {
+            NSString *openingURL = encodeByAddingPercentEscapes(_activityURL.absoluteString);
+            NSString *callbackURL = encodeByAddingPercentEscapes(self.callbackURL.absoluteString);
+            NSString *sourceName = encodeByAddingPercentEscapes(self.callbackSource);
+            
+            NSURL *activityURL = [NSURL URLWithString:[NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@", openingURL, callbackURL, sourceName]];
+            [[UIApplication sharedApplication] openURL:activityURL];
+            success = YES;
+        } else {
+            
+            NSString *scheme = _activityURL.scheme;
+            
+            NSString *chromeScheme = nil;
+            if ([scheme isEqualToString:@"http"]) {
+                chromeScheme = @"googlechrome";
+            } else if ([scheme isEqualToString:@"https"]) {
+                chromeScheme = @"googlechromes";
+            }
+            
+            if (chromeScheme) {
+                NSString *absoluteString = [_activityURL absoluteString];
+                NSRange rangeForScheme = [absoluteString rangeOfString:@":"];
+                NSString *urlNoScheme = [absoluteString substringFromIndex:rangeForScheme.location];
+                NSString *chromeURLString = [chromeScheme stringByAppendingString:urlNoScheme];
+                NSURL *chromeURL = [NSURL URLWithString:chromeURLString];
+                
+                [[UIApplication sharedApplication] openURL:chromeURL];
+                success = YES;
+            }
+        }
+    }
+    
+    [self activityDidFinish:success];
 }
 
 @end

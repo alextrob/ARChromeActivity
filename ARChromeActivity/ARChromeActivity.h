@@ -16,14 +16,14 @@
 @interface ARChromeActivity : UIActivity
 
 /// Uses the "CFBundleName" from your Info.plist by default.
-@property (strong, nonatomic) NSString *callbackSource;
+@property (strong, nonatomic, nonnull) NSString *callbackSource;
 
-/// The text beneath the icon. Defaults to "Chrome".
-@property (strong, nonatomic) NSString *activityTitle;
+/// The text beneath the icon. Defaults to "Open in Chrome".
+@property (strong, nonatomic, nonnull) NSString *activityTitle;
 
 /// Empty by default. Either set this in the initializer, or set this property. For iOS 9+, make sure you register the Chrome URL scheme in your Info.plist. See the demo project.
-@property (strong, nonatomic) NSURL *callbackURL;
+@property (strong, nonatomic, nullable) NSURL *callbackURL;
 
-- (id)initWithCallbackURL:(NSURL *)callbackURL;
+- (nonnull id)initWithCallbackURL:(nullable NSURL *)callbackURL;
 
 @end
