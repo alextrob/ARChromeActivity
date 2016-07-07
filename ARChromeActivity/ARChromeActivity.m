@@ -57,6 +57,9 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome://"]]) {
+        return NO;
+    }
     if (_callbackURL && ![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome-x-callback://"]]) {
         return NO;
     }
