@@ -16,6 +16,7 @@
 @implementation ARChromeActivity {
     NSURL *_activityURL;
 }
+@synthesize activityTitle = _title;
 
 static NSString *encodeByAddingPercentEscapes(NSString *input) {
     NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)input, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
@@ -24,7 +25,12 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 
 - (void)commonInit {
     _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
-    _activityTitle = @"Open in Chrome";
+    _title = @"Open in Chrome";
+}
+
+- (NSString *)activityTitle
+{
+    return _title;
 }
 
 - (id)init {
