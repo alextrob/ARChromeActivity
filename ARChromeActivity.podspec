@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/apploft/ARChromeActivity.git", :tag => s.version.to_s }
   s.source_files = 'ARChromeActivity/*.{h,m}'
   s.resources    = 'ARChromeActivity/*.png'
-  s.resource_bundle = { "ARChromeActivity" => ["ARChromeActivity/*.lproj/*.strings"] }
+  s.resource_bundle = { "ARChromeActivity" => ["Resources/*"] }
   s.requires_arc = true
 end
