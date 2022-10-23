@@ -22,13 +22,22 @@
 @synthesize activityTitle = _activityTitle;
 
 static NSString *encodeByAddingPercentEscapes(NSString *input) {
-    NSString *encodedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)input, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+    // Reserved characters defined by RFC 3986
+    NSString *genDelims = @":/?#[]@";
+    NSString *subDelims = @"!$&'()*+,;=";
+    NSString *reservedCharacters = [NSString stringWithFormat:@"%@%@",
+                                    genDelims,
+                                    subDelims];
+    // URLQueryAllowedCharacterSetからRFC 3986で予約されている文字を除いたもののみエスケープしない
+    NSMutableCharacterSet * allowedCharacterSet = [NSCharacterSet URLQueryAllowedCharacterSet].mutableCopy;
+    [allowedCharacterSet removeCharactersInString:reservedCharacters];
+    NSString *encodedValue = [input stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
     return encodedValue;
 }
 
 - (void)commonInit {
     _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
-    _activityTitle = @"Open in Chrome";
+    _activityTitle = NSLocalizedString(@"Open in Chrome", nil);
 }
 
 - (id)init {
@@ -94,7 +103,9 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
     NSString *sourceName = encodeByAddingPercentEscapes(self.callbackSource);
 
     NSURL *activityURL = [NSURL URLWithString:[NSString stringWithFormat:@"googlechrome-x-callback://x-callback-url/open/?url=%@&x-success=%@&x-source=%@", openingURL, callbackURL, sourceName]];
-    [[UIApplication sharedApplication] openURL:activityURL];
+    [[UIApplication sharedApplication] openURL:activityURL
+                                       options:@{}
+                             completionHandler:nil];
     [self activityDidFinish:YES];
 }
 

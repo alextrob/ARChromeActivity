@@ -24,8 +24,8 @@
 		FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C9163185EF00F1BC17 /* ARChromeActivity.png */; };
 		FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */; };
 		FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861D1163186CE00F1BC17 /* RootViewController.m */; };
-		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; };
+		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +175,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = FA986198163185A100F1BC17;
@@ -296,6 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -310,6 +312,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
