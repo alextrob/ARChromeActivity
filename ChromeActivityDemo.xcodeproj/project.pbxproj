@@ -24,11 +24,15 @@
 		FA9861CE163185EF00F1BC17 /* ARChromeActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861C9163185EF00F1BC17 /* ARChromeActivity.png */; };
 		FA9861CF163185EF00F1BC17 /* ARChromeActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9861CA163185EF00F1BC17 /* ARChromeActivity@2x.png */; };
 		FA9861D2163186CE00F1BC17 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9861D1163186CE00F1BC17 /* RootViewController.m */; };
-		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		FAFC91011BAFF4260075BE44 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91001BAFF4260075BE44 /* Launch Screen.storyboard */; };
+		FAFC91031BAFF4680075BE44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC91021BAFF4680075BE44 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0A6818F29D7012C002D9F21 /* ARChromeActivity.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ARChromeActivity.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0A6819029D7012C002D9F21 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A0A6819129D7012C002D9F21 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		A0A6819229D7012C002D9F21 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		FA1868ED19F67E6A0091ED0C /* ARChromeActivity@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x.png"; sourceTree = "<group>"; };
 		FA1868EE19F67E6A0091ED0C /* ARChromeActivity@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@3x~ipad.png"; sourceTree = "<group>"; };
 		FA9861A3163185A100F1BC17 /* ChromeActivityDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromeActivityDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +77,10 @@
 		FA986198163185A100F1BC17 = {
 			isa = PBXGroup;
 			children = (
+				A0A6818F29D7012C002D9F21 /* ARChromeActivity.podspec */,
+				A0A6819029D7012C002D9F21 /* LICENSE */,
+				A0A6819129D7012C002D9F21 /* readme.md */,
+				A0A6819229D7012C002D9F21 /* screenshot.png */,
 				FA9861AD163185A100F1BC17 /* ChromeActivityDemo */,
 				FA9861A6163185A100F1BC17 /* Frameworks */,
 				FA9861A4163185A100F1BC17 /* Products */,
@@ -175,6 +183,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = FA986198163185A100F1BC17;
@@ -296,6 +305,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -310,6 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChromeActivityDemo/ChromeActivityDemo-Prefix.pch";
 				INFOPLIST_FILE = "ChromeActivityDemo/ChromeActivityDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alextrob.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
