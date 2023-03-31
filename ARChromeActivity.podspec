@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.platform     = :ios, '6.0'
-  s.ios.deployment_target = '5.0'
+  s.platform     = :ios, '10.0'
+  s.ios.deployment_target = '10.0'
   s.name         = "ARChromeActivity"
   s.version      = "1.0.7"
   s.summary      = "A UIActivity subclass for opening URLs in Google Chrome."
